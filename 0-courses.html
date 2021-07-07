@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Holberton font CSS -->
+    <link rel="stylesheet" href="holberton-fonts.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="courses-header text-white text-center">
+        <nav class="navbar navbar-expand-md navbar-dark container-md bg-transparent justify-content-start pt-4">
+            <button class="navbar-toggler col-3 align-self-start text-left pt-2" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span>
+                    <svg class="hamburger" viewBox="0 0 100 100" width="20px" height="20px">
+                        <rect width="100" height="10" rx="10" fill="white"></rect>
+                        <rect y="30" width="70" height="10" rx="10" fill="white"></rect>
+                        <rect y="60" width="100" height="10" rx="10" fill="white"></rect>
+                    </svg>
+                </span>
+            </button>
+            <a class="navbar-brand col-6 col-md-3 pt-2" href="#">
+                <img class="d-block d-md-inline mx-auto mr-md-2 mb-2 nav-smile" src="images/smile_off.png" alt="">
+                <img class="d-block d-md-inline mx-auto nav-logo" src="images/logo.png" alt="logo">
+            </a>
+            <div class="collapse navbar-collapse text-center justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">pricing</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="courses-quote">
+            <div class="row justify-content-center">
+                <h2 class="d-none d-sm-block col-sm-12 col-md-10 col-lg-7 col-xl-6 py-2 ">« Don’t cry because it’s over.
+                    <span id="courses-purple-smile">Smile</span> because it happened. »</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="px-5 pt-5 mb-n3" id="video-count">11 videos</div>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="d-flex justify-content-center px-5">
+                    <div class="card container mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_4.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Diagonal Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card container d-none d-md-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_3.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Sad Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card container d-none d-lg-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_1.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Natural Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card container d-none d-xl-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_2.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Happy Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="d-flex justify-content-center px-5">
+                    <div class="card container mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_4.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Diagonal Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card container d-none d-md-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_3.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Sad Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card container d-none d-lg-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_1.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Natural Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card container d-none d-xl-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_2.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Happy Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="row justify-content-center">
+                <div class="d-flex justify-content-center px-5">
+                    <div class="card container mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_4.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Diagonal Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card container d-none d-md-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_3.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Sad Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card container d-none d-lg-block mx-0 my-5 pt-4" style="width: 18rem;">
+                        <img src="images/thumbnail_1.jpg" class="card-img-top card-thumbnail" alt="">
+                        <div class="card-body row">
+                            <h5 class="card-title">Natural Smile</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+                                eiusmod.</p>
+                            <div class="rater">
+                                <img src="images/profile_1.jpg" alt="" class="rounded-circle">
+                                <span class="rating-text p-1 pl-2">Philip Massey</span>
+                            </div>
+                            <span class="star-rating pt-1">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_on.png" alt="star on">
+                                <img src="images/star_off.png" alt="star off">
+                            </span>
+                            <span class="rating-time pt-1">8 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center d-md-flex flex-column justify-content-around">
+        <div class="footer-container container-xl d-md-flex justify-content-between px-5">
+            <a class="navbar-brand mt-md-4 pt-5 pb-md-4" href="#">
+                <img class="d-inline mr-2 mb-2 nav-smile" src="images/smile_off.png" alt="">
+                <img class="d-inline nav-logo" src="images/logo.png" alt="logo">
+            </a>
+            <div class="social text-white pt-4 pb-4 mt-md-4 pt-md-5 pb-md-4">
+                <a class="holberton_school-icon-ic_facebook"></a>
+                <a class="holberton_school-icon-ic_twitter ml-md-3"></a>
+                <a class="holberton_school-icon-ic_instagram ml-md-3"></a>
+            </div>
+        </div>
+        <p class="copyright m-0 pb-4">©smileschool 2020</p>
+    </footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
