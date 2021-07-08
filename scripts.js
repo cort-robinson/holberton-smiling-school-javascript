@@ -154,39 +154,43 @@ function updateActiveSlide() {
 
 
 $(document).ready(function () {
-    loadQuotes();
-    loadVideos(getScreenSize());
-    loadVideosLatest(getScreenSize());
+    if (document.URL.endsWith('homepage.html')) {
+        loadQuotes();
+        loadVideos(getScreenSize());
+        loadVideosLatest(getScreenSize());
 
-    const mediaQuerymd = window.matchMedia('(min-width: 768px)');
-    const mediaQuerylg = window.matchMedia('(min-width: 992px)');
-    const mediaQueryxl = window.matchMedia('(min-width: 1200px)');
+        const mediaQuerymd = window.matchMedia('(min-width: 768px)');
+        const mediaQuerylg = window.matchMedia('(min-width: 992px)');
+        const mediaQueryxl = window.matchMedia('(min-width: 1200px)');
 
-    mediaQuerymd.addEventListener("change", (e) => {
-        if (e.matches) {
-            loadVideos('md');
-            loadVideosLatest('md');
-        } else {
-            loadVideos('sm');
-            loadVideosLatest('sm');
-        }
-    });
-    mediaQuerylg.addEventListener("change", (e) => {
-        if (e.matches) {
-            loadVideos('lg');
-            loadVideosLatest('lg');
-        } else {
-            loadVideos('md');
-            loadVideosLatest('md');
-        }
-    });
-    mediaQueryxl.addEventListener("change", (e) => {
-        if (e.matches) {
-            loadVideos('xl');
-            loadVideosLatest('xl');
-        } else {
-            loadVideos('lg');
-            loadVideosLatest('lg');
-        }
-    });
+        mediaQuerymd.addEventListener("change", (e) => {
+            if (e.matches) {
+                loadVideos('md');
+                loadVideosLatest('md');
+            } else {
+                loadVideos('sm');
+                loadVideosLatest('sm');
+            }
+        });
+        mediaQuerylg.addEventListener("change", (e) => {
+            if (e.matches) {
+                loadVideos('lg');
+                loadVideosLatest('lg');
+            } else {
+                loadVideos('md');
+                loadVideosLatest('md');
+            }
+        });
+        mediaQueryxl.addEventListener("change", (e) => {
+            if (e.matches) {
+                loadVideos('xl');
+                loadVideosLatest('xl');
+            } else {
+                loadVideos('lg');
+                loadVideosLatest('lg');
+            }
+        });
+    } else if (document.URL.endsWith('pricing.html')) {
+        loadQuotes();
+    }
 });
