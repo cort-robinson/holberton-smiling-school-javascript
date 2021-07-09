@@ -56,6 +56,7 @@ function loadVideos(screenSize) {
                 `<!-- slide ${card.id} -->
                 <div class="card container mx-0 my-5 pt-4 screenSize${screenSize} card${cardNum}" style="width: 18rem;">
                     <img src=${card.thumb_url} class="card-img-top card-thumbnail" alt="">
+                    <img src="images/play.png" class="playIcon" style="width:64px;height:64px;" alt="play icon">
                     <div class="card-body row">
                         <h5 class="card-title">${card.title}</h5>
                         <p class="card-text">${card['sub-title']}</p>
@@ -108,6 +109,7 @@ function loadVideosLatest(screenSize) {
                 `<!-- slide ${card.id} -->
                 <div class="card container mx-0 my-5 pt-4 screenSize${screenSize} card${cardNum}" style="width: 18rem;">
                     <img src=${card.thumb_url} class="card-img-top card-thumbnail" alt="">
+                    <img src="images/play.png" class="playIcon" style="width:64px;height:64px;" alt="play icon">
                     <div class="card-body row">
                         <h5 class="card-title">${card.title}</h5>
                         <p class="card-text">${card['sub-title']}</p>
@@ -125,6 +127,62 @@ function loadVideosLatest(screenSize) {
         }
         $('#latestCarouselInner > .loader').remove();
         updateActiveSlide(screenSize);
+    });
+}
+
+
+function loadCourses(searchQuery = '', topics = 'all', sortBy = 'most_popular') {
+    $('#courseList').empty();
+    $('#courseList').append($('<div class="loader my-5">'));
+
+    const paramList = {
+        'All': 'all',
+        'Novice': 'novice',
+        'Intermediate': 'intermediate',
+        'Expert': 'expert',
+        'Most Popular': 'most_popular',
+        'Most Recent': 'most_recent',
+        'Most Reviewed': 'most_reviewed'
+    };
+    $.get('https://smileschool-api.hbtn.info/courses', { q: searchQuery, topic: paramList[topics], sort: paramList[sortBy] }, function (data) {
+        const courses = data.courses;
+        console.clear();
+        console.log(data);
+        let slideNum = 0;
+        let cardNum = 0;
+        const starOn = '<img src="images/star_on.png" alt="star on"</img>';
+        const starOff = '<img src="images/star_off.png" alt="star off"></img>';
+
+
+        for (let card of courses) {
+            cardNum++;
+
+            if (cardNum === 1) {
+                slideNum++;
+                $('#courseList').append($(`<div id="courseRow${slideNum}" class="row justify-content-start">`));
+            }
+
+            $('#courseRow' + slideNum).append(
+                `<div class="card container col-12 col-md-6 col-lg-4 col-xl-3 mx-0 my-5 pt-4 card${cardNum}" style="width: 18rem;">
+                <img src=${card.thumb_url} class="card-img-top card-thumbnail" alt="">
+                <img src="images/play.png" class="playIcon" style="width:64px;height:64px;" alt="play icon">
+                <div class="card-body row">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card['sub-title']}</p>
+                    <div class="rater">
+                        <img src=${card.author_pic_url} alt="" class="rounded-circle">
+                        <span class="rating-text p-1 pl-2">${card.author}</span>
+                    </div>
+                    <span class="star-rating pt-1">
+                        ${starOn.repeat(card.star)}
+                        ${starOff.repeat(5 - card.star)}
+                    </span>
+                    <span class="rating-time pt-1">${card.duration}</span>
+                </div>
+            </div>`);
+        }
+        $('#courseList > .loader').remove();
+        $('#courseList').prepend($('<div class="pt-5 mb-n3" id="video-count">' + courses.length + ' videos</div>'));
     });
 }
 
@@ -154,7 +212,7 @@ function updateActiveSlide() {
 
 
 $(document).ready(function () {
-    if (document.URL.endsWith('homepage.html')) {
+    if (document.URL.includes('homepage.html')) {
         loadQuotes();
         loadVideos(getScreenSize());
         loadVideosLatest(getScreenSize());
@@ -190,7 +248,30 @@ $(document).ready(function () {
                 loadVideosLatest('lg');
             }
         });
-    } else if (document.URL.endsWith('pricing.html')) {
+    } else if (document.URL.includes('pricing.html')) {
         loadQuotes();
+    } else if (document.URL.includes('courses.html')) {
+        loadCourses();
+
+        $('#topicItems > .dropdown-item').click(function (e) {
+            e.preventDefault();
+            $('#selectedTopic').html($(this).html());
+            loadCourses($('#searchBar').val(), $(this).html(), $('#selectedSort').html());
+        });
+        $('#sortItems > .dropdown-item').click(function (e) {
+            e.preventDefault();
+            $('#selectedSort').html($(this).html());
+            loadCourses($('#searchBar').val(), $('#selectedTopic').html(), $(this).html());
+        });
+
+        // 500ms after the user finishes typing in the search box, update the results
+        // reset the time if the user starts typing again
+        let timeout;
+        $('#searchBar').keyup(function () {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                loadCourses($('#searchBar').val(), $('#selectedTopic').html(), $('#selectedSort').html());
+            }, 500);
+        });
     }
 });

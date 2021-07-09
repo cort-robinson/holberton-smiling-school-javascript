@@ -78,10 +78,8 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <label for="topicDropdown" class="inputLabel text-white justify-content-start">TOPICS</label>
-                <a class="nav-link dropdown-toggle dropdownField" href="#" id="topicDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="topicDropdown">
+                <a id="selectedTopic" class="nav-link dropdown-toggle dropdownField" href="#" id="topicDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</a>
+                  <div id="topicItems" class="dropdown-menu" aria-labelledby="topicDropdown">
                     <a class="dropdown-item" href="#">All</a>
                     <a class="dropdown-item" href="#">Novice</a>
                     <a class="dropdown-item" href="#">Intermediate</a>
@@ -90,13 +88,11 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <label for="topicDropdown" class="inputLabel text-white justify-content-start">SORT BY</label>
-                <a class="nav-link dropdown-toggle dropdownField" href="#" id="topicDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Most Popular
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="topicDropdown">
-                    <a class="dropdown-item" href="#">Most popular</a>
-                    <a class="dropdown-item" href="#">Most recent</a>
-                    <a class="dropdown-item" href="#">Most reviewed</a>
+                <a id="selectedSort" class="nav-link dropdown-toggle dropdownField" href="#" id="topicDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Most Popular</a>
+                  <div id="sortItems" class="dropdown-menu" aria-labelledby="topicDropdown">
+                    <a class="dropdown-item" href="#">Most Popular</a>
+                    <a class="dropdown-item" href="#">Most Recent</a>
+                    <a class="dropdown-item" href="#">Most Reviewed</a>
                   </div>
             </div>
         </nav>
