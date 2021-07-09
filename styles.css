@@ -410,6 +410,64 @@ footer {
     color: var(--clr-primary);
 }
 
+#navSearch {
+    background-color: var(--clr-primary);
+}
+
+.searchInput,
+.searchInput:focus {
+    color: var(--clr-light);
+    font-size: 1.4375rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-bottom: var(--clr-light) 1px solid;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    padding-left: 2em;
+    height: 51px;
+}
+
+.dropdownField {
+    color: var(--clr-light);
+    font-weight: 300;
+    font-size: 1.4375rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: .25rem;
+    border: none;
+    border-bottom: var(--clr-light) 1px solid;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    top: 2.25em;
+    right: 1.75em;
+}
+
+.searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    font-size: 1.4375rem;
+}
+
+.inputLabel {
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.searchField {
+    position: relative;
+}
+
+.searchField > span {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 43px;
+    left: 25px;
+}
+
 #video-count {
     color: var(--clr-dark);
     opacity: 0.3;
