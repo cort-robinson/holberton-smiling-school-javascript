@@ -15,7 +15,7 @@ This is a simple responsive and dynamic webapp built using comprehension of HTML
 ---
 
 ## Author
-* **Cort Robinson** - [GitHub](https://github.com/cort-robinson), [Twitter](https://twitter.com/cort_robinson), [LinkedIn](https://www.linkedin.com/in/cort-robinson-4201b41a9/), [Warforged5e](https://github.com/cort-robinson/warforged5e)
+* **Cort Robinson** - [GitHub](https://github.com/cort-robinson), [Twitter](https://twitter.com/cort_robinson), [LinkedIn](https://www.linkedin.com/in/cort-robinson-4201b41a9/), [Warforged5e](https://warforged5e.com)
 
 ## About the Author ##
   Growing up in a military family, Cort has travelled all around the US. Throughout that time he developed a love and passion for technology and computer science. As a student at Holberton school of Computer Science, Cort has developed skills across a wide range of technologies and is always excited to expand his knowledge in to new areas.
