@@ -1,7 +1,9 @@
 # 0x0F. Build a web app in JavaScript
 
+![smiling-school](https://user-images.githubusercontent.com/61477167/139351175-a6152e15-0602-4766-9e71-997b413693e2.png)
+
 ## Description:
-Use HTML/CSS/Accessibility/Responsive design/Bootstrap/Javascript knowledges to build a simple webapp which is responsive and dynamic.
+This is a simple responsive and dynamic webapp built using comprehension of HTML, CSS, Javascript, Bootstrap, web accessibility, and responsive design.
 
 ---
 ## Requirements:
@@ -13,4 +15,4 @@ Use HTML/CSS/Accessibility/Responsive design/Bootstrap/Javascript knowledges to 
 ---
 
 ## Author
-* **Cort Robinson** - [cort-robinson](https://github.com/cort-robinson)
+* **Cort Robinson** - [GitHub](https://github.com/cort-robinson), [Twitter](https://twitter.com/cort_robinson), [LinkedIn](https://www.linkedin.com/in/cort-robinson-4201b41a9/), [Warforged5e](https://github.com/cort-robinson/warforged5e)
